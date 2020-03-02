@@ -8,28 +8,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DynamicBlockComponent implements OnInit {
 
+  createdApps;
+
   constructor(private http: HttpClient) {
-    this.http.get<any>('http://localhost:9483/AppGalleryLite/api/applications').subscribe(data => {
-      console.log(data)
-  })
+    this.ngOnInit();
    }
 
   ngOnInit = () => {
-    this.http.get<any>('http://localhost:9483/AppGalleryLite/api/applications').subscribe(data => {
-        console.log(data)
+    return this.http.get('http://localhost:9483/AppGalleryLite/api/applications').subscribe(data => {
+        this.createdApps = data;
     })
-    // this.pullFromApi();
   }
 
-  pullFromApi = () => {
-    // return this.http.get<Config>('http://localhost:9483/AppGalleryLite/api/applications')
-    // fetch(
-    //   'http://localhost:9483/AppGalleryLite/api/applications',
-    //   {mode: "cors"}
-    // ).then(response => {
-    //   console.log(response)
-    // })
-  }
 }
 
 

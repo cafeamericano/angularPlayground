@@ -3,7 +3,9 @@
 </a>
 
 <div>
-  You better work.
+  <li ngclass='createdApp' *ngFor='let createdApp of createdApps'>
+    {{createdApp.title | json}}
+  </li>
 </div>
 
 <!-- 
