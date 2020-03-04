@@ -16,7 +16,7 @@ export class DynamicBlockComponent implements OnInit {
    }
 
   ngOnInit = () => {
-    return this.http.get('http://localhost:9483/AppGalleryLite/api/applications').subscribe(data => {
+    return this.http.get('https://mfarmer5102-grandcentralapi.herokuapp.com/AppGalleryLite/api/applications').subscribe(data => {
         this.createdApps = data;
     })
   }
