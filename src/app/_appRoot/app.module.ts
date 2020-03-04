@@ -5,8 +5,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { DynamicBlockComponent } from './dynamicBlock/dynamicBlock.component';
-import { TableRowComponent } from './tableRow/tableRow.component';
+import { DynamicBlockComponent } from '../dynamicBlock/dynamicBlock.component';
+import { TableRowComponent } from '../tableRow/tableRow.component';
 
 @NgModule({
   imports: [
