@@ -8,23 +8,14 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class TableRowComponent implements OnInit {
-
-  @Input() createdApp:object;
+  
+  @Input() createdApp: any;
 
   constructor(private http: HttpClient) {
     this.ngOnInit();
    }
 
   ngOnInit = () => {
-    console.log(this.createdApp)
-    // console.log('initialized row component')
   }
 
 }
-
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/

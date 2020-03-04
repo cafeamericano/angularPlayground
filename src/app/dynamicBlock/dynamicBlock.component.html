@@ -1,21 +1,7 @@
 <div class="container d-block">
-  
     <div class="card p-3" style="border: 1px pink solid">
-
-      <a [routerLink]="['/']">
-        <h1>Dynamic Block Component</h1>
-      </a>
-
       <table ngclass='createdApp'  class='table table-striped' *ngFor='let createdApp of createdApps'>
           <tableRow [createdApp]="createdApp"></tableRow>
       </table>
-      
     </div>
-
 </div>
-
-<!-- 
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
--->

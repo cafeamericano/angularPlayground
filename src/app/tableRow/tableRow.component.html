@@ -1,14 +1,8 @@
-<div class='card p-3 mb-3' style="border: 1px blue solid">
-    <h5 *ngIf="createdApp">{{createdApp.title}}</h5>
+<div *ngIf='createdApp' class='card p-3 mb-3' style="border: 1px blue solid">
+    <h5>{{createdApp.title}}</h5>
     <hr/>
     <img height=100 width=170 [src]="createdApp.imagePath"/>
     <p>Language: {{createdApp.language}}</p>
     <p>Description: {{createdApp.description}}</p>
     <small>Keywords: {{createdApp.keywords}}</small>
 </div>
-
-<!-- 
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
--->

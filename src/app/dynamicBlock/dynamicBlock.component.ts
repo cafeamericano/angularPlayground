@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { TableRowComponent } from '../tableRow/tableRow.component';
 
 @Component({
   selector: 'dynamicBlock',
@@ -10,7 +9,7 @@ import { TableRowComponent } from '../tableRow/tableRow.component';
 
 export class DynamicBlockComponent implements OnInit {
 
-  createdApps:object;
+  createdApps: object;
 
   constructor(private http: HttpClient) {
     this.ngOnInit();
@@ -23,10 +22,3 @@ export class DynamicBlockComponent implements OnInit {
   }
 
 }
-
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/
