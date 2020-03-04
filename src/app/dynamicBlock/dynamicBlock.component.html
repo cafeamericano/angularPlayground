@@ -1,7 +1,5 @@
-<div class="container d-block">
-    <div class="card p-3" style="border: 1px pink solid">
-      <table ngclass='createdApp'  class='table table-striped' *ngFor='let createdApp of createdApps'>
-          <tableRow [createdApp]="createdApp"></tableRow>
-      </table>
-    </div>
+<div class="container d-block bg-dark p-5">
+    <table ngclass='createdApp'  class='table table-striped' *ngFor='let createdApp of createdApps'>
+        <tableRow [createdApp]="createdApp"></tableRow>
+    </table>
 </div>
