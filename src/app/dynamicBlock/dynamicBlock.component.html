@@ -1,5 +1,7 @@
 <div class="container d-block bg-dark p-5">
-    <table ngclass='createdApp'  class='table table-striped' *ngFor='let createdApp of createdApps'>
+  <div class='animated fadeInUp'>
+    <table ngclass='createdApp' *ngFor='let createdApp of createdApps'>
         <tableRow [createdApp]="createdApp"></tableRow>
     </table>
+  </div>
 </div>
