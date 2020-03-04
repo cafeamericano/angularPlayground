@@ -1,11 +1,17 @@
-<a [routerLink]="['/']">
-  <h1>My Store</h1>
-</a>
+<div class="container d-block">
+  
+    <div class="card p-3" style="border: 1px pink solid">
 
-<div>
-  <li ngclass='createdApp' *ngFor='let createdApp of createdApps'>
-    {{createdApp.title | json}}
-  </li>
+      <a [routerLink]="['/']">
+        <h1>Dynamic Block Component</h1>
+      </a>
+
+      <table ngclass='createdApp'  class='table table-striped' *ngFor='let createdApp of createdApps'>
+          <tableRow [createdApp]="createdApp"></tableRow>
+      </table>
+      
+    </div>
+
 </div>
 
 <!-- 

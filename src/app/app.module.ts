@@ -5,9 +5,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
 import { DynamicBlockComponent } from './dynamicBlock/dynamicBlock.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import { TableRowComponent } from './tableRow/tableRow.component';
 
 @NgModule({
   imports: [
@@ -15,14 +14,16 @@ import { ProductListComponent } from './product-list/product-list.component';
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
+      {
+        path: '', 
+        component: DynamicBlockComponent 
+      },
     ])
   ],
   declarations: [
     AppComponent,
-    TopBarComponent,
     DynamicBlockComponent,
-    ProductListComponent
+    TableRowComponent
   ],
   bootstrap: [ AppComponent ]
 })

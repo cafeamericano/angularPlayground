@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { TableRowComponent } from '../tableRow/tableRow.component';
 
 @Component({
   selector: 'dynamicBlock',
   templateUrl: './dynamicBlock.component.html',
-  styleUrls: ['./dynamicBlock.component.css']
+  styleUrls: ['./dynamicBlock.component.css'],
 })
+
 export class DynamicBlockComponent implements OnInit {
 
-  createdApps;
+  createdApps:object;
 
   constructor(private http: HttpClient) {
     this.ngOnInit();
