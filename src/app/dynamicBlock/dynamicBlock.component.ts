@@ -16,15 +16,23 @@ export class DynamicBlockComponent implements OnInit {
 	}
 
   	ngOnInit = () => {
-		var cities = ['Raleigh', 'Durham', 'Charlotte'];
-		var citiesArray = [];
-		cities.forEach(city => {
-			this.http.get(`http://localhost:9483/WeatherBuddy/api/${city}`).subscribe(data => {
-				citiesArray.push(data)
+
+		var cityNamesArray;
+		var cityDataArray = [];
+
+		this.http.get(`http://localhost:9483/WeatherBuddy/api/savedCitiesGetAll`).subscribe(data => {
+			
+			cityNamesArray = data;
+			
+			cityNamesArray.forEach(city => {
+				this.http.get(`http://localhost:9483/WeatherBuddy/api/${city}`).subscribe(data => {
+					cityDataArray.push(data)
+				})
 			})
+
 		})
 
-		this.cityWeatherArray = citiesArray;
+		this.cityWeatherArray = cityDataArray;
 		return;
   }
 
