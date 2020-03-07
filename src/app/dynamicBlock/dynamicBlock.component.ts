@@ -20,12 +20,15 @@ export class DynamicBlockComponent implements OnInit {
 		var cityNamesArray;
 		var cityDataArray = [];
 
-		this.http.get(`http://localhost:9483/WeatherBuddy/api/savedCitiesGetAll`).subscribe(data => {
+		var rootUrl = 'http://mfarmer5102-grandcentralapi.herokuapp.com'
+		// var rootUrl = 'http://localhost:9483'
+
+		this.http.get(rootUrl + `/WeatherBuddy/api/savedCitiesGetAll`).subscribe(data => {
 			
 			cityNamesArray = data;
 			
 			cityNamesArray.forEach(city => {
-				this.http.get(`http://localhost:9483/WeatherBuddy/api/${city}`).subscribe(data => {
+				this.http.get(rootUrl + `/WeatherBuddy/api/${city}`).subscribe(data => {
 					cityDataArray.push(data)
 				})
 			})
