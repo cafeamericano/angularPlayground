@@ -9,15 +9,16 @@ import { HttpClient } from '@angular/common/http';
 
 export class DynamicBlockComponent implements OnInit {
 
-  createdApps: object;
+  cityWeatherArray: any;
 
   constructor(private http: HttpClient) {
     this.ngOnInit();
    }
 
   ngOnInit = () => {
-    return this.http.get('https://mfarmer5102-grandcentralapi.herokuapp.com/AppGalleryLite/api/applications').subscribe(data => {
-        this.createdApps = data;
+    return this.http.get('http://localhost:9483/WeatherBuddy/api/Los%20Angeles').subscribe(data => {
+        data = [data];
+        this.cityWeatherArray = data;
     })
   }
 
