@@ -20,7 +20,7 @@ export class DynamicBlockComponent implements OnInit {
 		var cityNamesArray;
 		var cityDataArray = [];
 
-		var rootUrl = 'http://mfarmer5102-grandcentralapi.herokuapp.com'
+		var rootUrl = 'https://mfarmer5102-grandcentralapi.herokuapp.com'
 		// var rootUrl = 'http://localhost:9483'
 
 		this.http.get(rootUrl + `/WeatherBuddy/api/savedCitiesGetAll`).subscribe(data => {
