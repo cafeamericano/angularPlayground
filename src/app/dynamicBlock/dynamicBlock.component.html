@@ -1,6 +1,6 @@
 <div class="container d-block p-5">
   <div class='row animated fadeInUp'>
-    <div class='column' style='width: 100%' ngclass='cityWeatherObj' *ngFor='let cityWeatherObj of cityWeatherArray'>
+    <div class='col-6' style='width: 100%' ngclass='cityWeatherObj' *ngFor='let cityWeatherObj of cityWeatherArray'>
         <tableRow [cityWeatherObj]="cityWeatherObj"></tableRow>
     </div>
   </div>
