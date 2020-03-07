@@ -1,7 +1,9 @@
-<div class="container d-block bg-dark p-5">
+<titleBar></titleBar>
+
+<div class="container d-block p-5">
   <div class='row animated fadeInUp'>
-    <div class='column' style='width: 100%' ngclass='createdApp' *ngFor='let createdApp of createdApps'>
-        <tableRow [createdApp]="createdApp"></tableRow>
+    <div class='col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12' style='width: 100%' ngclass='cityWeatherObj' *ngFor='let cityWeatherObj of cityWeatherArray'>
+      <tableRow [cityWeatherObj]="cityWeatherObj"></tableRow>
     </div>
   </div>
 </div>

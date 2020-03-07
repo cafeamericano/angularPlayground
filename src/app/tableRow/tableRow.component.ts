@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 
 export class TableRowComponent implements OnInit {
   
-  @Input() createdApp: any;
+  @Input() cityWeatherObj: any;
 
   constructor(private http: HttpClient) {
     this.ngOnInit();

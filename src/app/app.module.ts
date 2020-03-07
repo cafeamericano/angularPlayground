@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DynamicBlockComponent } from './dynamicBlock/dynamicBlock.component';
 import { TableRowComponent } from './tableRow/tableRow.component';
+import { TitleBarComponent } from './titleBar/titleBar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DynamicBlockComponent,
-    TableRowComponent
+    TableRowComponent,
+    TitleBarComponent
   ],
   imports: [
     BrowserModule,
