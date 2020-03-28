@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --base-href=/",
     "build": "ng build",
+    "deploy": "ng deploy --base-href=/weatherBuddy/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
